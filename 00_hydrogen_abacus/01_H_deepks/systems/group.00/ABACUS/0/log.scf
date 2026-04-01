@@ -1,0 +1,100 @@
+                                                                                     
+                              ABACUS v3.9.0.26
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: ba570a7ed (Mon Mar 30 12:27:45 2026 +0800)
+
+ Wed Apr  1 14:08:42 2026
+ MAKE THE DIR         : OUT.ABACUS/
+ RUNNING WITH DEVICE  : CPU / 12th Gen Intel(R) Core(TM) i5-1240P (x1)
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+ UNIFORM GRID DIM     : 125 * 125 * 125
+ UNIFORM GRID DIM(BIG): 25 * 25 * 25
+ DONE(0.609973   SEC) : SETUP UNITCELL
+ DONE(0.610464   SEC) : INIT K-POINTS
+ ---------------------------------------------------------
+ Self-consistent calculations for electrons
+ ---------------------------------------------------------
+ SPIN    KPOINTS         PROCESSORS  THREADS     NBASE       
+ 1       Gamma           1           2           9           
+ ---------------------------------------------------------
+ Use Systematically Improvable Atomic bases
+ ---------------------------------------------------------
+ ELEMENT ORBITALS        NBASE       NATOM       XC          
+ H       3s2p-10au       9           1           
+ ---------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ---------------------------------------------------------
+ DONE(0.765108   SEC) : INIT PLANEWAVE
+ START CHARGE      : atomic
+ DONE(1.14826    SEC) : CHARGE
+ DONE(1.22214    SEC) : POTENTIALS
+
+ ================================================================
+ SELF-CONSISTENT: 
+ ================================================================
+ DONE(2.58771    SEC) : INIT SCF
+ ITER       ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GE1     -1.21123479e+01   0.00000000e+00   4.8810e-02   1.38
+ GE2     -1.21121963e+01   1.51627985e-04   2.9869e-02   1.37
+ GE3     -1.21122585e+01  -6.21427686e-05   4.2061e-03   1.18
+ GE4     -1.21122655e+01  -7.07210303e-06   1.2262e-03   1.11
+ GE5     -1.21122622e+01   3.29409939e-06   5.1892e-04   1.07
+ GE6     -1.21122600e+01   2.22258162e-06   1.7661e-04   1.11
+ GE7     -1.21122600e+01   4.48271654e-08   9.5210e-05   0.81
+ GE8     -1.21122589e+01   1.04036131e-06   8.3898e-05   1.22
+ GE9     -1.21122589e+01   5.65142785e-08   1.8153e-05   1.33
+ GE10    -1.21122589e+01   1.93252724e-08   4.0716e-06   1.16
+ GE11    -1.21122588e+01   1.02282133e-08   2.4622e-06   1.11
+ GE12    -1.21122588e+01  -5.40409330e-10   5.7618e-07   1.13
+ GE13    -1.21122588e+01   8.54931609e-10   2.7332e-07   1.02
+ GE14    -1.21122588e+01   3.03215917e-10   1.6722e-07   1.10
+ GE15    -1.21122588e+01  -6.24757656e-10   4.1905e-08   1.07
+ GE16    -1.21122588e+01   2.87950441e-10   2.7799e-08   1.23
+ GE17    -1.21122588e+01   8.17024710e-10   2.0764e-08   1.28
+ GE18    -1.21122588e+01  -4.11155793e-10   1.8648e-08   1.51
+ GE19    -1.21122588e+01  -3.82867987e-10   2.7728e-09   1.58
+
+TIME STATISTICS
+------------------------------------------------------------------
+   CLASS_NAME           NAME        TIME/s  CALLS   AVG/s  PER/%  
+------------------------------------------------------------------
+                 total              25.53  13       1.96   100.00 
+ Driver          atomic_world       25.53  1        25.53  100.00 
+ ESolver_KS_LCAO before_all_runners 1.20   1        1.20   4.70   
+ mymath          heapsort           0.35   3        0.12   1.37   
+ PW_Basis_Sup    recip2real         5.11   121      0.04   20.00  
+ Relax_Driver    relax_driver       24.26  1        24.26  95.01  
+ ESolver_KS      runner             24.26  1        24.26  95.01  
+ ESolver_KS_LCAO before_scf         1.37   1        1.37   5.35   
+ Potential       init_pot           1.32   1        1.32   5.17   
+ Potential       cal_veff           16.43  20       0.82   64.36  
+ H_Hartree_pw    v_hartree          2.12   20       0.11   8.28   
+ PW_Basis_Sup    real2recip         5.26   139      0.04   20.59  
+ PotXC           cal_veff           14.17  20       0.71   55.47  
+ XC_Functional   v_xc               14.10  20       0.71   55.24  
+ HSolverLCAO     solve              3.85   19       0.20   15.10  
+ HamiltLCAO      updateHk           1.92   19       0.10   7.51   
+ OperatorLCAO    init               1.92   133      0.01   7.51   
+ Veff            contributeHR       1.55   19       0.08   6.07   
+ Gint            cal_gint_vl        1.55   19       0.08   6.07   
+ DeePKS          contributeHR       0.36   19       0.02   1.42   
+ DeePKS_domain   cal_edelta_gedm    0.32   20       0.02   1.27   
+ LCAO_domain     dm2rho             1.91   19       0.10   7.50   
+ Gint            cal_gint_rho       1.73   19       0.09   6.77   
+ Charge_Mixing   mix_rho            2.89   18       0.16   11.32  
+ Charge_Mixing   mix_rho_real       2.77   18       0.15   10.84  
+ Charge_Mixing   Kerker_screen_real 1.82   18       0.10   7.11   
+------------------------------------------------------------------
+
+
+ START  Time  : Wed Apr  1 14:08:42 2026
+ FINISH Time  : Wed Apr  1 14:09:07 2026
+ TOTAL  Time  : 25
+ SEE INFORMATION IN : OUT.ABACUS/
+0 #SCF IS CONVERGED#

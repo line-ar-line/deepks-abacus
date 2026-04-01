@@ -1,0 +1,27 @@
+{
+    "d7029855d30465ac177642b9218e67109dc6e7c2": {
+        "context": {
+            "local_root": "/home/linearline/project/00_hydrogen_abacus/01_H_deepks/iter/iter.init/00.scf",
+            "remote_root": "/home/linearline/project/00_hydrogen_abacus/01_H_deepks/iter/iter.init/00.scf",
+            "job_uuid": "e6dbdffe-cda6-4780-a835-d3a412461278",
+            "ip": null,
+            "instance_id": null
+        },
+        "finished": true,
+        "fail_count": 0,
+        "task_chunk": [
+            {
+                "dir": "systems",
+                "cmds": [
+                    "cd group.00/ABACUS/0/ &&                      mpirun -n 1 /home/linearline/project/abacus-develop/build/abacus_4p > log.scf 2>err.log  &&                      echo 0`grep -i converge ./OUT.ABACUS/running_scf.log` > conv  &&                      echo 0`grep -i converge ./OUT.ABACUS/running_scf.log`"
+                ]
+            },
+            {
+                "dir": "systems",
+                "cmds": [
+                    "cd group.00/ABACUS/0/ &&                      mpirun -n 1 /home/linearline/project/abacus-develop/build/abacus_4p > log.scf 2>err.log  &&                      echo 0`grep -i converge ./OUT.ABACUS/running_scf.log` > conv  &&                      echo 0`grep -i converge ./OUT.ABACUS/running_scf.log`"
+                ]
+            }
+        ]
+    }
+}

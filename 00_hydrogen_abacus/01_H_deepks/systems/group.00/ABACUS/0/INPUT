@@ -1,0 +1,23 @@
+INPUT_PARAMETERS
+calculation scf
+ecutwfc 100.000000
+scf_thr 1.000000e-08
+scf_nmax 100
+basis_type lcao
+dft_functional pbe
+gamma_only 1
+mixing_type pulay
+mixing_beta 0.400000
+symmetry 0
+nbands 8
+nspin 1
+smearing_method gaussian
+smearing_sigma 0.020000
+cal_force 0
+cal_stress 0
+deepks_out_labels 1
+deepks_scf 1
+deepks_bandgap 0
+deepks_v_delta 0
+deepks_model /home/linearline/project/00_hydrogen_abacus/01_H_deepks/iter/iter.00/00.scf/model.ptg
+out_wfc_lcao 0

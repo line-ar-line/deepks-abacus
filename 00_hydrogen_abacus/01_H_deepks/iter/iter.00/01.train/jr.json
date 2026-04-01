@@ -1,0 +1,21 @@
+{
+    "3a8de23906ed2f19e273800ba7b6d950544c53f1": {
+        "context": {
+            "local_root": "/home/linearline/project/00_hydrogen_abacus/01_H_deepks/iter/iter.00/01.train",
+            "remote_root": "/home/linearline/project/00_hydrogen_abacus/01_H_deepks/iter/iter.00/01.train",
+            "job_uuid": "6f69d3f8-edd5-4319-b14a-e76e1031b0e2",
+            "ip": null,
+            "instance_id": null
+        },
+        "finished": true,
+        "fail_count": 0,
+        "task_chunk": [
+            {
+                "dir": ".",
+                "cmds": [
+                    "python -u -m deepks.model.train train_input.yaml -r old_model.pth -d data_train/* -t data_test/* -o model.pth"
+                ]
+            }
+        ]
+    }
+}

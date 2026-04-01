@@ -1,0 +1,632 @@
+{
+    "total": 7.06999,
+    "sub": [
+        {
+            "class_name": "Broyden_Mixing",
+            "sub": [
+                {
+                "name": "tem_cal_coef",
+                "cpu_second": 0.00310586700000037,
+                "calls": 2,
+                "cpu_second_per_call": 0.001552933500000,
+                "cpu_second_per_total": 0.000439303190529
+                }
+            ]
+        },
+        {
+            "class_name": "Charge",
+            "sub": [
+                {
+                "name": "atomic_rho",
+                "cpu_second": 0.0475601099999996,
+                "calls": 2,
+                "cpu_second_per_call": 0.023780055000000,
+                "cpu_second_per_total": 0.006727045319360
+                },
+                {
+                "name": "set_rho_core",
+                "cpu_second": 0.000284895000000007,
+                "calls": 1,
+                "cpu_second_per_call": 0.000284895000000,
+                "cpu_second_per_total": 0.000040296407562
+                }
+            ]
+        },
+        {
+            "class_name": "Charge_Mixing",
+            "sub": [
+                {
+                "name": "get_drho",
+                "cpu_second": 0.0962572410000004,
+                "calls": 5,
+                "cpu_second_per_call": 0.019251448200000,
+                "cpu_second_per_total": 0.013614914316296
+                },
+                {
+                "name": "init_mixing",
+                "cpu_second": 8.1624999999988e-05,
+                "calls": 2,
+                "cpu_second_per_call": 0.000040812500000,
+                "cpu_second_per_total": 0.000011545286043
+                },
+                {
+                "name": "mix_rho",
+                "cpu_second": 0.0331456280000006,
+                "calls": 2,
+                "cpu_second_per_call": 0.016572814000000,
+                "cpu_second_per_total": 0.004688217535550
+                },
+                {
+                "name": "mix_rho_recip",
+                "cpu_second": 0.0302052399999999,
+                "calls": 2,
+                "cpu_second_per_call": 0.015102620000000,
+                "cpu_second_per_total": 0.004272320193586
+                },
+                {
+                "name": "recip_hartree",
+                "cpu_second": 0.00228034600000093,
+                "calls": 2,
+                "cpu_second_per_call": 0.001140173000000,
+                "cpu_second_per_total": 0.000322539011912
+                },
+                {
+                "name": "recip_rho",
+                "cpu_second": 0.00236531899999881,
+                "calls": 5,
+                "cpu_second_per_call": 0.000473063800000,
+                "cpu_second_per_total": 0.000334557849167
+                }
+            ]
+        },
+        {
+            "class_name": "DiagoCG",
+            "sub": [
+                {
+                "name": "diag_once",
+                "cpu_second": 5.018792591,
+                "calls": 5,
+                "cpu_second_per_call": 1.003758518200000,
+                "cpu_second_per_total": 0.709873152272514
+                }
+            ]
+        },
+        {
+            "class_name": "DiagoIterAssist",
+            "sub": [
+                {
+                "name": "diag_hegvd",
+                "cpu_second": 0.00063560000000068,
+                "calls": 4,
+                "cpu_second_per_call": 0.000158900000000,
+                "cpu_second_per_total": 0.000089901179896
+                },
+                {
+                "name": "diag_subspace",
+                "cpu_second": 0.495433786,
+                "calls": 4,
+                "cpu_second_per_call": 0.123858446500000,
+                "cpu_second_per_total": 0.070075648083327
+                }
+            ]
+        },
+        {
+            "class_name": "Driver",
+            "sub": [
+                {
+                "name": "atomic_world",
+                "cpu_second": 7.069989273,
+                "calls": 1,
+                "cpu_second_per_call": 7.069989273000000,
+                "cpu_second_per_total": 1.000000593919217
+                },
+                {
+                "name": "reading",
+                "cpu_second": 0.009237773,
+                "calls": 1,
+                "cpu_second_per_call": 0.009237773000000,
+                "cpu_second_per_total": 0.001306618458640
+                }
+            ]
+        },
+        {
+            "class_name": "ESolver_KS",
+            "sub": [
+                {
+                "name": "runner",
+                "cpu_second": 6.91551556,
+                "calls": 1,
+                "cpu_second_per_call": 6.915515560000000,
+                "cpu_second_per_total": 0.978151366320692
+                }
+            ]
+        },
+        {
+            "class_name": "ESolver_KS_PW",
+            "sub": [
+                {
+                "name": "after_scf",
+                "cpu_second": 0.0250603970000007,
+                "calls": 1,
+                "cpu_second_per_call": 0.025060397000001,
+                "cpu_second_per_total": 0.003544618091509
+                },
+                {
+                "name": "before_scf",
+                "cpu_second": 0.320000465,
+                "calls": 1,
+                "cpu_second_per_call": 0.320000465000000,
+                "cpu_second_per_total": 0.045261830350506
+                },
+                {
+                "name": "hamilt2rho_single",
+                "cpu_second": 5.688178528,
+                "calls": 5,
+                "cpu_second_per_call": 1.137635705600000,
+                "cpu_second_per_total": 0.804553116939155
+                }
+            ]
+        },
+        {
+            "class_name": "ElecState",
+            "sub": [
+                {
+                "name": "cal_delta_eband",
+                "cpu_second": 0.00608429799999938,
+                "calls": 8,
+                "cpu_second_per_call": 0.000760537250000,
+                "cpu_second_per_total": 0.000860581449086
+                },
+                {
+                "name": "cal_delta_escf",
+                "cpu_second": 0.0026439400000009,
+                "calls": 3,
+                "cpu_second_per_call": 0.000881313333334,
+                "cpu_second_per_total": 0.000373966843257
+                }
+            ]
+        },
+        {
+            "class_name": "ElecStatePW",
+            "sub": [
+                {
+                "name": "psiToRho",
+                "cpu_second": 0.268587980999999,
+                "calls": 5,
+                "cpu_second_per_call": 0.053717596200000,
+                "cpu_second_per_total": 0.037989893640333
+                }
+            ]
+        },
+        {
+            "class_name": "HSolverPW",
+            "sub": [
+                {
+                "name": "solve",
+                "cpu_second": 5.688112329,
+                "calls": 5,
+                "cpu_second_per_call": 1.137622465800000,
+                "cpu_second_per_total": 0.804543753553050
+                },
+                {
+                "name": "solve_psik",
+                "cpu_second": 5.412825594,
+                "calls": 5,
+                "cpu_second_per_call": 1.082565118800000,
+                "cpu_second_per_total": 0.765606367954830
+                }
+            ]
+        },
+        {
+            "class_name": "H_Ewald_pw",
+            "sub": [
+                {
+                "name": "compute_ewald",
+                "cpu_second": 0.001792814,
+                "calls": 1,
+                "cpu_second_per_call": 0.001792814000000,
+                "cpu_second_per_total": 0.000253581016259
+                }
+            ]
+        },
+        {
+            "class_name": "H_Hartree_pw",
+            "sub": [
+                {
+                "name": "v_hartree",
+                "cpu_second": 0.132228065999999,
+                "calls": 5,
+                "cpu_second_per_call": 0.026445613200000,
+                "cpu_second_per_total": 0.018702736231547
+                }
+            ]
+        },
+        {
+            "class_name": "Input_Conv",
+            "sub": [
+                {
+                "name": "Convert",
+                "cpu_second": 0.000535352999999999,
+                "calls": 1,
+                "cpu_second_per_call": 0.000535353000000,
+                "cpu_second_per_total": 0.000075721942040
+                }
+            ]
+        },
+        {
+            "class_name": "ModuleIO",
+            "sub": [
+                {
+                "name": "ctrl_iter_pw",
+                "cpu_second": 3.48400000049764e-06,
+                "calls": 4,
+                "cpu_second_per_call": 0.000000871000000,
+                "cpu_second_per_total": 0.000000492787462
+                },
+                {
+                "name": "ctrl_output_fp",
+                "cpu_second": 4.21599999977929e-06,
+                "calls": 1,
+                "cpu_second_per_call": 0.000004216000000,
+                "cpu_second_per_total": 0.000000596323748
+                },
+                {
+                "name": "ctrl_runner_pw",
+                "cpu_second": 1.20199999997794e-06,
+                "calls": 1,
+                "cpu_second_per_call": 0.000001202000000,
+                "cpu_second_per_total": 0.000000170014503
+                },
+                {
+                "name": "ctrl_scf_pw",
+                "cpu_second": 1.75100000010531e-06,
+                "calls": 1,
+                "cpu_second_per_call": 0.000001751000000,
+                "cpu_second_per_total": 0.000000247666718
+                },
+                {
+                "name": "write_eig_file",
+                "cpu_second": 0.00134609200000035,
+                "calls": 1,
+                "cpu_second_per_call": 0.001346092000000,
+                "cpu_second_per_total": 0.000190395310020
+                },
+                {
+                "name": "write_rhog",
+                "cpu_second": 0.0556524250000008,
+                "calls": 1,
+                "cpu_second_per_call": 0.055652425000001,
+                "cpu_second_per_total": 0.007871646745714
+                }
+            ]
+        },
+        {
+            "class_name": "Nonlocal",
+            "sub": [
+                {
+                "name": "add_nonlocal_pp",
+                "cpu_second": 0.0337150380000133,
+                "calls": 408,
+                "cpu_second_per_call": 0.000082634897059,
+                "cpu_second_per_total": 0.004768756602330
+                },
+                {
+                "name": "getvnl",
+                "cpu_second": 0.00564411199999976,
+                "calls": 6,
+                "cpu_second_per_call": 0.000940685333333,
+                "cpu_second_per_total": 0.000798320214389
+                }
+            ]
+        },
+        {
+            "class_name": "Operator",
+            "sub": [
+                {
+                "name": "EkineticPW",
+                "cpu_second": 0.0219762680000004,
+                "calls": 408,
+                "cpu_second_per_call": 0.000053863401961,
+                "cpu_second_per_total": 0.003108389589225
+                },
+                {
+                "name": "hPsi",
+                "cpu_second": 5.125838274,
+                "calls": 408,
+                "cpu_second_per_call": 0.012563329102941,
+                "cpu_second_per_total": 0.725014016345009
+                },
+                {
+                "name": "nonlocal_pw",
+                "cpu_second": 0.104571471,
+                "calls": 408,
+                "cpu_second_per_call": 0.000256302625000,
+                "cpu_second_per_total": 0.014790904069170
+                },
+                {
+                "name": "veff_pw",
+                "cpu_second": 4.996946914,
+                "calls": 408,
+                "cpu_second_per_call": 0.012247418906863,
+                "cpu_second_per_total": 0.706783233867970
+                }
+            ]
+        },
+        {
+            "class_name": "PSIPrepare",
+            "sub": [
+                {
+                "name": "initialize_psi",
+                "cpu_second": 0.126353243,
+                "calls": 1,
+                "cpu_second_per_call": 0.126353243000000,
+                "cpu_second_per_total": 0.017871783557884
+                },
+                {
+                "name": "prepare_init",
+                "cpu_second": 5.82610000000039e-05,
+                "calls": 1,
+                "cpu_second_per_call": 0.000058261000000,
+                "cpu_second_per_total": 0.000008240611457
+                }
+            ]
+        },
+        {
+            "class_name": "PW_Basis_K",
+            "sub": [
+                {
+                "name": "distributeg",
+                "cpu_second": 0.001697429,
+                "calls": 1,
+                "cpu_second_per_call": 0.001697429000000,
+                "cpu_second_per_total": 0.000240089474339
+                },
+                {
+                "name": "real2recip",
+                "cpu_second": 2.238408034,
+                "calls": 444,
+                "cpu_second_per_call": 0.005041459536036,
+                "cpu_second_per_total": 0.316607179586812
+                },
+                {
+                "name": "recip2real",
+                "cpu_second": 2.54797403899999,
+                "calls": 494,
+                "cpu_second_per_call": 0.005157842184211,
+                "cpu_second_per_total": 0.360393128462210
+                },
+                {
+                "name": "setuptransform",
+                "cpu_second": 0.002980341,
+                "calls": 1,
+                "cpu_second_per_call": 0.002980341000000,
+                "cpu_second_per_total": 0.000421548414715
+                }
+            ]
+        },
+        {
+            "class_name": "PW_Basis_Sup",
+            "sub": [
+                {
+                "name": "distributeg",
+                "cpu_second": 0.005812724,
+                "calls": 1,
+                "cpu_second_per_call": 0.005812724000000,
+                "cpu_second_per_total": 0.000822169203918
+                },
+                {
+                "name": "real2recip",
+                "cpu_second": 0.365671901,
+                "calls": 41,
+                "cpu_second_per_call": 0.008918826853659,
+                "cpu_second_per_total": 0.051721735926256
+                },
+                {
+                "name": "recip2real",
+                "cpu_second": 0.299745251000001,
+                "calls": 30,
+                "cpu_second_per_call": 0.009991508366667,
+                "cpu_second_per_total": 0.042396871826833
+                },
+                {
+                "name": "setuptransform",
+                "cpu_second": 0.009819828,
+                "calls": 1,
+                "cpu_second_per_call": 0.009819828000000,
+                "cpu_second_per_total": 0.001388946072335
+                }
+            ]
+        },
+        {
+            "class_name": "PotLocal",
+            "sub": [
+                {
+                "name": "cal_fixed_v",
+                "cpu_second": 0.012723441,
+                "calls": 1,
+                "cpu_second_per_call": 0.012723441000000,
+                "cpu_second_per_total": 0.001799641847448
+                }
+            ]
+        },
+        {
+            "class_name": "PotXC",
+            "sub": [
+                {
+                "name": "cal_veff",
+                "cpu_second": 0.702529202000001,
+                "calls": 5,
+                "cpu_second_per_call": 0.140505840400000,
+                "cpu_second_per_total": 0.099367847972348
+                }
+            ]
+        },
+        {
+            "class_name": "Potential",
+            "sub": [
+                {
+                "name": "cal_fixed_v",
+                "cpu_second": 0.013078994,
+                "calls": 1,
+                "cpu_second_per_call": 0.013078994000000,
+                "cpu_second_per_total": 0.001849932335515
+                },
+                {
+                "name": "cal_veff",
+                "cpu_second": 0.842427824,
+                "calls": 5,
+                "cpu_second_per_call": 0.168485564800000,
+                "cpu_second_per_total": 0.119155530765976
+                },
+                {
+                "name": "init_pot",
+                "cpu_second": 0.190353386,
+                "calls": 1,
+                "cpu_second_per_call": 0.190353386000000,
+                "cpu_second_per_total": 0.026924156700136
+                },
+                {
+                "name": "interpolate_vrs",
+                "cpu_second": 0.00179603899999947,
+                "calls": 5,
+                "cpu_second_per_call": 0.000359207800000,
+                "cpu_second_per_total": 0.000254037169980
+                }
+            ]
+        },
+        {
+            "class_name": "Relax_Driver",
+            "sub": [
+                {
+                "name": "relax_driver",
+                "cpu_second": 6.915565766,
+                "calls": 1,
+                "cpu_second_per_call": 6.915565766000000,
+                "cpu_second_per_total": 0.978158467608669
+                }
+            ]
+        },
+        {
+            "class_name": "Structure_Factor",
+            "sub": [
+                {
+                "name": "get_sk",
+                "cpu_second": 0.00187996200000062,
+                "calls": 6,
+                "cpu_second_per_call": 0.000313327000000,
+                "cpu_second_per_total": 0.000265907492070
+                },
+                {
+                "name": "setup",
+                "cpu_second": 0.003104277,
+                "calls": 1,
+                "cpu_second_per_call": 0.003104277000000,
+                "cpu_second_per_total": 0.000439078296136
+                }
+            ]
+        },
+        {
+            "class_name": "UnitCell",
+            "sub": [
+                {
+                "name": "check_tau",
+                "cpu_second": 1.22300000000158e-06,
+                "calls": 1,
+                "cpu_second_per_call": 0.000001223000000,
+                "cpu_second_per_total": 0.000000172984807
+                }
+            ]
+        },
+        {
+            "class_name": "XC_Functional",
+            "sub": [
+                {
+                "name": "v_xc",
+                "cpu_second": 0.699716137,
+                "calls": 5,
+                "cpu_second_per_call": 0.139943227400000,
+                "cpu_second_per_total": 0.098969959579295
+                }
+            ]
+        },
+        {
+            "class_name": "mymath",
+            "sub": [
+                {
+                "name": "heapsort",
+                "cpu_second": 0.022634581,
+                "calls": 3,
+                "cpu_second_per_call": 0.007544860333333,
+                "cpu_second_per_total": 0.003201503364305
+                }
+            ]
+        },
+        {
+            "class_name": "pp_cell_vnl",
+            "sub": [
+                {
+                "name": "getvnl",
+                "cpu_second": 0.00562929700000059,
+                "calls": 6,
+                "cpu_second_per_call": 0.000938216166667,
+                "cpu_second_per_total": 0.000796224736132
+                }
+            ]
+        },
+        {
+            "class_name": "ppcell_vl",
+            "sub": [
+                {
+                "name": "init_vloc",
+                "cpu_second": 0.004347669,
+                "calls": 1,
+                "cpu_second_per_call": 0.004347669000000,
+                "cpu_second_per_total": 0.000614947408586
+                }
+            ]
+        },
+        {
+            "class_name": "ppcell_vnl",
+            "sub": [
+                {
+                "name": "init",
+                "cpu_second": 0.000311362999999981,
+                "calls": 1,
+                "cpu_second_per_call": 0.000311363000000,
+                "cpu_second_per_total": 0.000044040121265
+                },
+                {
+                "name": "init_vnl",
+                "cpu_second": 0.003404078,
+                "calls": 1,
+                "cpu_second_per_call": 0.003404078000000,
+                "cpu_second_per_total": 0.000481483053270
+                }
+            ]
+        },
+        {
+            "class_name": "psi_init",
+            "sub": [
+                {
+                "name": "random_t",
+                "cpu_second": 0.013406394,
+                "calls": 1,
+                "cpu_second_per_call": 0.013406394000000,
+                "cpu_second_per_total": 0.001896240778400
+                }
+            ]
+        },
+        {
+            "class_name": "unitcell",
+            "sub": [
+                {
+                "name": "check_atomic_stru",
+                "cpu_second": 0.000621673,
+                "calls": 1,
+                "cpu_second_per_call": 0.000621673000000,
+                "cpu_second_per_total": 0.000087931303036
+                }
+            ]
+        }
+    ]
+}

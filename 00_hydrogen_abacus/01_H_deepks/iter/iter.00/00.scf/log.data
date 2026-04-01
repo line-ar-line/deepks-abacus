@@ -1,0 +1,14 @@
+Training:
+  Convergence:
+    1 / 1 = 	 1.00000
+  Energy:
+    ME: 	 1.085289919044996e-07
+    MAE: 	 1.085289919044996e-07
+    MARE: 	 0.0
+Testing:
+  Convergence:
+    1 / 1 = 	 1.00000
+  Energy:
+    ME: 	 1.085289919044996e-07
+    MAE: 	 1.085289919044996e-07
+    MARE: 	 0.0

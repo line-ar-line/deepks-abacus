@@ -1,0 +1,40 @@
+╔══ [ START         ] (0,)
+║╔═ [ START         ] (0, 0)
+║║╔ [ START         ] (0, 0, 0)
+║║╚ [        FINISH ] (0, 0, 0)
+║║╔ [ START         ] (0, 0, 1)
+║║║ new submission of e6dbdffe-cda6-4780-a835-d3a412461278 for chunk d7029855d30465ac177642b9218e67109dc6e7c2
+║║║ job e6dbdffe-cda6-4780-a835-d3a412461278 finished
+║║╚ [        FINISH ] (0, 0, 1)
+║║╔ [ START         ] (0, 0, 2)
+║║╚ [        FINISH ] (0, 0, 2)
+║╚═ [        FINISH ] (0, 0)
+║╔═ [ START         ] (0, 1)
+║║╔ [ START         ] (0, 1, 0)
+║║║ new submission of 88770ada-4c89-4eef-be0f-3337d3acb3ae for chunk c4a9cd58e8da96728a9d69321502ea0d5722a50a
+║║║ job 88770ada-4c89-4eef-be0f-3337d3acb3ae finished
+║║╚ [        FINISH ] (0, 1, 0)
+║║╔ [ START         ] (0, 1, 1)
+║║╚ [        FINISH ] (0, 1, 1)
+║╚═ [        FINISH ] (0, 1)
+╚══ [        FINISH ] (0,)
+╔══ [ START         ] (1,)
+║╔═ [ START         ] (1, 0)
+║║╔ [ START         ] (1, 0, 0)
+║║╚ [        FINISH ] (1, 0, 0)
+║║╔ [ START         ] (1, 0, 1)
+║║║ new submission of 2ac46acd-6488-4b9c-b18a-6cb4de6d8dca for chunk d7029855d30465ac177642b9218e67109dc6e7c2
+║║║ job 2ac46acd-6488-4b9c-b18a-6cb4de6d8dca finished
+║║╚ [        FINISH ] (1, 0, 1)
+║║╔ [ START         ] (1, 0, 2)
+║║╚ [        FINISH ] (1, 0, 2)
+║╚═ [        FINISH ] (1, 0)
+║╔═ [ START         ] (1, 1)
+║║╔ [ START         ] (1, 1, 0)
+║║║ new submission of 6f69d3f8-edd5-4319-b14a-e76e1031b0e2 for chunk 3a8de23906ed2f19e273800ba7b6d950544c53f1
+║║║ job 6f69d3f8-edd5-4319-b14a-e76e1031b0e2 finished
+║║╚ [        FINISH ] (1, 1, 0)
+║║╔ [ START         ] (1, 1, 1)
+║║╚ [        FINISH ] (1, 1, 1)
+║╚═ [        FINISH ] (1, 1)
+╚══ [        FINISH ] (1,)

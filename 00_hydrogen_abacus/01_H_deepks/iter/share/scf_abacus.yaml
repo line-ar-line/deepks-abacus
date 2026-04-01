@@ -1,0 +1,20 @@
+abacus_path: /home/linearline/project/abacus-develop/build/abacus_4p
+cal_force: 0
+coord_type: Direct
+dft_functional: pbe
+ecutwfc: 100
+gamma_only: 1
+lattice_constant: 1.8897261258369282
+lattice_vector:
+- [10, 0, 0]
+- [0, 10, 0]
+- [0, 0, 10]
+nbands: 8
+ntype: 1
+orb_files: [H_gga_10au_100Ry_3s2p.orb]
+pp_files: [H_ONCV_PBE-1.0.upf]
+proj_file: [jle.orb]
+run_cmd: mpirun
+scf_nmax: 100
+scf_thr: 1e-08
+smearing_method: gaussian

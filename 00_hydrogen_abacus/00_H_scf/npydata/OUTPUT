@@ -1,0 +1,129 @@
+搜索目录: /home/linearline/project/00_hydrogen_abacus/00_H_scf
+输出目录: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata
+
+找到 3 个npy文件:
+  /home/linearline/project/00_hydrogen_abacus/00_H_scf/00_lcao_hse/OUT.H/deepks_box.npy
+  /home/linearline/project/00_hydrogen_abacus/00_H_scf/00_lcao_hse/OUT.H/deepks_atom.npy
+  /home/linearline/project/00_hydrogen_abacus/00_H_scf/00_lcao_hse/OUT.H/deepks_energy.npy
+
+分类结果:
+  atom: 1 个文件
+  box: 1 个文件
+  energy: 1 个文件
+
+日志文件: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/OUTPUT
+
+开始合并文件:
+
+  ==================================================
+  处理类别: atom
+  ==================================================
+
+  [文件 1/1] deepks_atom.npy
+
+  === 原始数据 (shape: (1, 4)) 预览 ===
+  Shape: (1, 4)
+  Dtype: float64
+  内容:
+[[1. 0. 0. 0.]]
+  统计: min=0.000000, max=1.000000, mean=0.250000
+
+  ==================================================
+  合并结果
+  ==================================================
+
+  === 合并后数据 (1 帧) 预览 ===
+  Shape: (1, 1, 4)
+  Dtype: float64
+  内容:
+[[[1. 0. 0. 0.]]]
+  统计: min=0.000000, max=1.000000, mean=0.250000
+  维度提升: (1, 4) -> (1, 1, 4)
+  新增维度 (帧数 n): 1
+
+  已保存到: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/atom.npy
+  文件大小: 0.16 KB
+
+  ==================================================
+  处理类别: box
+  ==================================================
+
+  [文件 1/1] deepks_box.npy
+
+  === 原始数据 (shape: (9,)) 预览 ===
+  Shape: (9,)
+  Dtype: float64
+  内容:
+[18.89726126  0.          0.          0.         18.89726126  0.
+  0.          0.         18.89726126]
+  统计: min=0.000000, max=18.897261, mean=6.299087
+
+  ==================================================
+  合并结果
+  ==================================================
+
+  === 合并后数据 (1 帧) 预览 ===
+  Shape: (1, 9)
+  Dtype: float64
+  内容:
+[[18.89726126  0.          0.          0.         18.89726126  0.
+   0.          0.         18.89726126]]
+  统计: min=0.000000, max=18.897261, mean=6.299087
+  维度提升: (9,) -> (1, 9)
+  新增维度 (帧数 n): 1
+
+  已保存到: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/box.npy
+  文件大小: 0.20 KB
+
+  ==================================================
+  处理类别: energy
+  ==================================================
+
+  [文件 1/1] deepks_energy.npy
+
+  === 原始数据 (shape: (1,)) 预览 ===
+  Shape: (1,)
+  Dtype: float64
+  内容:
+[-0.44511703]
+  统计: min=-0.445117, max=-0.445117, mean=-0.445117
+
+  ==================================================
+  合并结果
+  ==================================================
+
+  === 合并后数据 (1 帧) 预览 ===
+  Shape: (1, 1)
+  Dtype: float64
+  内容:
+[[-0.44511703]]
+  统计: min=-0.445117, max=-0.445117, mean=-0.445117
+  维度提升: (1,) -> (1, 1)
+  新增维度 (帧数 n): 1
+
+  已保存到: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/energy.npy
+  文件大小: 0.13 KB
+
+============================================================
+处理完成! 生成的文件汇总:
+============================================================
+
+atom.npy:
+  - 路径: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/atom.npy
+  - Shape: (1, 1, 4)
+  - Dtype: float64
+  - 大小: 0.16 KB
+
+box.npy:
+  - 路径: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/box.npy
+  - Shape: (1, 9)
+  - Dtype: float64
+  - 大小: 0.20 KB
+
+energy.npy:
+  - 路径: /home/linearline/project/00_hydrogen_abacus/00_H_scf/npydata/energy.npy
+  - Shape: (1, 1)
+  - Dtype: float64
+  - 大小: 0.13 KB
+
+============================================================

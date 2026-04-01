@@ -1,0 +1,11 @@
+prefix=/home/linearline/project/libxc
+exec_prefix=/home/linearline/project/libxc
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/
+
+Name: libxc
+Description: Library of exchange and correlation functionals to be used in DFT codes
+Requires:
+Version: 7.0.0
+Libs: -L${libdir} -lxc
+Cflags: -I${includedir}

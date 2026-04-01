@@ -1,0 +1,9 @@
+data_args: {batch_size: 16, group_batch: 1}
+model_args:
+  actv_fn: mygelu
+  hidden_sizes: [100, 100, 100]
+  output_scale: 100
+  use_resnet: true
+preprocess_args: {prefit_ridge: 10.0, prefit_trainable: false, prescale: false, preshift: true}
+train_args: {decay_rate: 0.96, decay_steps: 500, display_epoch: 100, n_epoch: 5000,
+  start_lr: 0.0003}
