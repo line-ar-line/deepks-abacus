@@ -1,0 +1,18 @@
+[submodule "DeePKS-L"]
+	path = DeePKS-L
+	url = https://github.com/MCresearch/DeePKS-L.git
+[submodule "LibComm"]
+	path = LibComm
+	url = https://github.com/abacusmodeling/LibComm.git
+[submodule "LibRI"]
+	path = LibRI
+	url = https://github.com/abacusmodeling/LibRI.git
+[submodule "abacus-develop"]
+	path = abacus-develop
+	url = https://github.com/deepmodeling/abacus-develop.git
+[submodule "deepks-kit"]
+	path = deepks-kit
+	url = https://github.com/deepmodeling/deepks-kit.git
+[submodule "libnpy"]
+	path = libnpy
+	url = https://github.com/llohse/libnpy.git
