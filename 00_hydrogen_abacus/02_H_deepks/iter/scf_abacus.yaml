@@ -1,0 +1,43 @@
+scf_abacus:
+  #INPUT args
+  ntype: 1
+  nbands: 8
+  ecutwfc: 100
+  scf_thr: 1e-8
+  scf_nmax: 100
+  cal_force: 0
+  dft_functional: "pbe"
+  smearing_method: "gaussian"
+  gamma_only: 1
+  deepks_v_delta: 1
+  #STRU args ( Here are default STRU args, you can set for each group in  ../systems/group.xx/stru_abacus.yaml )
+  orb_files: ["H_gga_10au_100Ry_3s2p.orb"]
+  pp_files: [ "H_ONCV_PBE-1.0.upf"]
+  proj_file: ["jle.orb"]
+  lattice_constant: 1.8897261258369282
+  lattice_vector: [[10, 0, 0], [0, 10, 0], [0, 0, 10]]
+  coord_type: "Direct"
+  #cmd args
+  run_cmd : "mpirun"
+  abacus_path: "/home/linearline/project/abacus-develop/build/abacus_4p"
+  deepks_model: model.ptg
+init_scf_abacus:
+  orb_files: ["H_gga_10au_100Ry_3s2p.orb"]
+  pp_files: [ "H_ONCV_PBE-1.0.upf"]
+  proj_file: ["jle.orb"]
+  ntype: 1
+  nbands: 8
+  ecutwfc: 100
+  scf_thr: 1e-8
+  scf_nmax: 100
+  dft_functional: "pbe"
+  smearing_method: "gaussian"
+  gamma_only: 1
+  cal_force: 0
+  deepks_v_delta: 1
+  lattice_constant: 1.8897261258369282
+  lattice_vector: [[10, 0, 0], [0, 10, 0], [0, 0, 10]]
+  coord_type: "Direct"
+  #cmd args
+  run_cmd : "mpirun"
+  abacus_path: "/home/linearline/project/abacus-develop/build/abacus_4p"

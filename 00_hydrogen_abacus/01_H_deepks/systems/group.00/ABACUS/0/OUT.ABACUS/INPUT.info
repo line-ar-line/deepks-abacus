@@ -54,7 +54,7 @@ nbands                         8 #number of bands
 nelec                          0 #input number of electrons
 nelec_delta                    0 #change in the number of total electrons
 nupdown                        0 #the difference number of electrons between spin-up and spin-down
-dft_functional                 pbe #exchange correlation functional
+dft_functional                 hse #exchange correlation functional
 xc_temperature                 0 #temperature for finite temperature functionals
 xc_exch_ext                    101 0.804 0.219515  #placeholder for xcpnet exchange functional
 xc_corr_ext                    130 0.0667246 0.0310907 1  #placeholder for xcpnet exchange functional
@@ -430,8 +430,8 @@ vdw_cn_thr_unit                Bohr #unit of cn_thr, Bohr or Angstrom
 
 #Parameters (15.exx)
 exx_fock_alpha                  #fraction of Fock exchange 1/r in hybrid functionals
-exx_erfc_alpha                  #fraction of exchange erfc(wr)/r in hybrid functionals
-exx_erfc_omega                  #range-separation parameter erfc(wr)/r in hybrid functionals
+exx_erfc_alpha                 0.25  #fraction of exchange erfc(wr)/r in hybrid functionals
+exx_erfc_omega                 0.11  #range-separation parameter erfc(wr)/r in hybrid functionals
 exx_separate_loop              1 #if 1, a two-step method is employed, else it will start with a GGA-Loop, and then Hybrid-Loop
 exx_hybrid_step                100 #the maximal electronic iteration number in the evaluation of Fock exchange
 exx_mixing_beta                1 #mixing_beta for outer-loop when exx_separate_loop=1
@@ -450,7 +450,7 @@ exx_opt_orb_lmax               0 #the maximum l of the spherical Bessel function
 exx_opt_orb_ecut               0 #the cut-off of plane wave expansion for opt ABFs
 exx_opt_orb_tolerence          0 #the threshold when solving for the zeros of spherical Bessel functions for opt ABFs
 exx_real_number                1 #exx calculated in real or complex
-exx_singularity_correction     default #set the scheme of Coulomb singularity correction
+exx_singularity_correction     limits #set the scheme of Coulomb singularity correction
 rpa_ccp_rmesh_times            10 #how many times larger the radial mesh required for calculating Columb potential is to that of atomic orbitals
 exx_symmetry_realspace         0 #whether to reduce real-space sector in Hexx calculation
 out_ri_cv                      0 #Whether to output the coefficient tensor C and ABFs-representation Coulomb matrix V

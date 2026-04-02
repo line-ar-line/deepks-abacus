@@ -1,0 +1,4 @@
+# load 2 systems with fields ['lb_e', 'eig', 'lb_vd', 'vdp', 'h_base', 'lb_band', 'lb_phi']
+model.pth
+all systems mean l1 error: 8.061101973780294e-08
+all systems mean l2 error: 8.061101973780294e-08

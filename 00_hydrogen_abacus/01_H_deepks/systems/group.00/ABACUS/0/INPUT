@@ -4,7 +4,7 @@ ecutwfc 100.000000
 scf_thr 1.000000e-08
 scf_nmax 100
 basis_type lcao
-dft_functional pbe
+dft_functional hse
 gamma_only 1
 mixing_type pulay
 mixing_beta 0.400000
@@ -21,3 +21,7 @@ deepks_bandgap 0
 deepks_v_delta 0
 deepks_model /home/linearline/project/00_hydrogen_abacus/01_H_deepks/iter/iter.00/00.scf/model.ptg
 out_wfc_lcao 0
+exx_pca_threshold 1e-4
+exx_c_threshold 1e-4
+exx_dm_threshold 1e-4
+exx_ccp_rmesh_times 1

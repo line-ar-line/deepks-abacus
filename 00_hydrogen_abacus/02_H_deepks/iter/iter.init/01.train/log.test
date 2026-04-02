@@ -1,0 +1,4 @@
+# load 2 systems with fields ['lb_e', 'eig']
+model.pth
+all systems mean l1 error: 0.0
+all systems mean l2 error: 0.0

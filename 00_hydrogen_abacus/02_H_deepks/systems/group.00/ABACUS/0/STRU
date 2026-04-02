@@ -1,0 +1,24 @@
+ATOMIC_SPECIES
+H 1.00 /home/linearline/project/00_hydrogen_abacus/02_H_deepks/iter/H_ONCV_PBE-1.0.upf
+
+LATTICE_CONSTANT
+1.8897261258369282
+
+LATTICE_VECTORS
+10 0 0 
+0 10 0 
+0 0 10 
+
+ATOMIC_POSITIONS
+Direct
+
+H
+0.0
+1
+0.000000000000 0.000000000000 0.000000000000 0 0 0
+
+NUMERICAL_ORBITAL
+/home/linearline/project/00_hydrogen_abacus/02_H_deepks/iter/H_gga_10au_100Ry_3s2p.orb
+
+NUMERICAL_DESCRIPTOR
+/home/linearline/project/00_hydrogen_abacus/02_H_deepks/iter/jle.orb

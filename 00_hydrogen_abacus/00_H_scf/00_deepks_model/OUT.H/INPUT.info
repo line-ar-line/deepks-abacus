@@ -54,7 +54,7 @@ nbands                         8 #number of bands
 nelec                          0 #input number of electrons
 nelec_delta                    0 #change in the number of total electrons
 nupdown                        0 #the difference number of electrons between spin-up and spin-down
-dft_functional                 default #exchange correlation functional
+dft_functional                 hse #exchange correlation functional
 xc_temperature                 0 #temperature for finite temperature functionals
 xc_exch_ext                    101 0.804 0.219515  #placeholder for xcpnet exchange functional
 xc_corr_ext                    130 0.0667246 0.0310907 1  #placeholder for xcpnet exchange functional
@@ -243,19 +243,19 @@ initsto_freq                   0 #frequency to generate new stochastic orbitals 
 npart_sto                      1 #Reduce memory when calculating Stochastic DOS
 
 #Parameters (8.DeepKS)
-deepks_out_labels              1 #>0 compute descriptor for deepks. 1 used during training, 2 used for label production
+deepks_out_labels              0 #>0 compute descriptor for deepks. 1 used during training, 2 used for label production
 deepks_out_freq_elec           0 #>0 frequency of electronic iteration to output descriptors and labels for deepks.
 deepks_out_base                none #base functional for output files, with dft_functional as target functional
 deepks_scf                     1 #>0 add V_delta to Hamiltonian
 deepks_equiv                   0 #whether to use equivariant version of DeePKS
-deepks_model                   model.ptg #file dir of traced pytorch model: 'model.ptg
+deepks_model                   model4.ptg #file dir of traced pytorch model: 'model.ptg
 bessel_descriptor_lmax         2 #lmax used in generating spherical bessel functions
-bessel_descriptor_ecut         50.000000 #energy cutoff for spherical bessel functions(Ry)
+bessel_descriptor_ecut         100.000000 #energy cutoff for spherical bessel functions(Ry)
 bessel_descriptor_tolerence    1e-12 #tolerence for spherical bessel root
 bessel_descriptor_rcut         6 #radial cutoff for spherical bessel functions(a.u.)
 bessel_descriptor_smooth       1 #spherical bessel smooth or not
 bessel_descriptor_sigma        0.1 #sphereical bessel smearing_sigma
-deepks_bandgap                 1 #>0 for bandgap label
+deepks_bandgap                 0 #>0 for bandgap label
 deepks_band_range              -1 0  #(int, int) range of bands for bandgap label
 deepks_v_delta                 0 #!=0 for v_delta/v_delta_R label. when output, 1 for vdpre, 2 for phialpha and grad_evdm (can save memory ) -1 for vdrpre, -2 for phialpha_r and gevdm (can save memory)
 deepks_out_unittest            0 #if set 1, prints intermediate quantities that shall be used for making unit test
@@ -430,8 +430,8 @@ vdw_cn_thr_unit                Bohr #unit of cn_thr, Bohr or Angstrom
 
 #Parameters (15.exx)
 exx_fock_alpha                  #fraction of Fock exchange 1/r in hybrid functionals
-exx_erfc_alpha                  #fraction of exchange erfc(wr)/r in hybrid functionals
-exx_erfc_omega                  #range-separation parameter erfc(wr)/r in hybrid functionals
+exx_erfc_alpha                 0.25  #fraction of exchange erfc(wr)/r in hybrid functionals
+exx_erfc_omega                 0.11  #range-separation parameter erfc(wr)/r in hybrid functionals
 exx_separate_loop              1 #if 1, a two-step method is employed, else it will start with a GGA-Loop, and then Hybrid-Loop
 exx_hybrid_step                100 #the maximal electronic iteration number in the evaluation of Fock exchange
 exx_mixing_beta                1 #mixing_beta for outer-loop when exx_separate_loop=1
@@ -445,12 +445,12 @@ exx_c_grad_threshold           0.0001 #threshold to screen nabla C matrix in exx
 exx_v_grad_threshold           0.1 #threshold to screen nabla V matrix in exx
 exx_c_grad_r_threshold         0.0001 #threshold to screen nabla C * R matrix in exx
 exx_v_grad_r_threshold         0.1 #threshold to screen nabla V * R matrix in exx
-exx_ccp_rmesh_times            1 #how many times larger the radial mesh required for calculating Columb potential is to that of atomic orbitals
+exx_ccp_rmesh_times            1.5 #how many times larger the radial mesh required for calculating Columb potential is to that of atomic orbitals
 exx_opt_orb_lmax               0 #the maximum l of the spherical Bessel functions for opt ABFs
 exx_opt_orb_ecut               0 #the cut-off of plane wave expansion for opt ABFs
 exx_opt_orb_tolerence          0 #the threshold when solving for the zeros of spherical Bessel functions for opt ABFs
 exx_real_number                0 #exx calculated in real or complex
-exx_singularity_correction     default #set the scheme of Coulomb singularity correction
+exx_singularity_correction     limits #set the scheme of Coulomb singularity correction
 rpa_ccp_rmesh_times            10 #how many times larger the radial mesh required for calculating Columb potential is to that of atomic orbitals
 exx_symmetry_realspace         0 #whether to reduce real-space sector in Hexx calculation
 out_ri_cv                      0 #Whether to output the coefficient tensor C and ABFs-representation Coulomb matrix V

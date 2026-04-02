@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
 检索并分类所有npy文件，按名称合并到npydata文件夹中
+支持哈密顿量数据的处理和帧数维度添加
 
 用法:
     python collect_npy.py                    # 使用当前目录作为搜索目录
     python collect_npy.py /path/to/search    # 指定搜索目录
     python collect_npy.py -h                 # 显示帮助信息
+    python collect_npy.py --hamiltonian /path/to/deepks_htot.npy  # 指定哈密顿量文件
 """
 import os
 import sys
@@ -49,19 +51,22 @@ def classify_npy_files(npy_files):
     classified = {
         'atom': [],
         'box': [],
-        'energy': []
+        'energy': [],
+        'hamiltonian': []
     }
-    
+
     for file_path in npy_files:
         basename = os.path.basename(file_path)
         # 匹配 deepks_atom.npy, deepks_box.npy, deepks_energy.npy
-        if 'atom' in basename.lower():
+        if 'hamiltonian' in basename.lower() or 'htot' in basename.lower():
+            classified['hamiltonian'].append(file_path)
+        elif 'atom' in basename.lower():
             classified['atom'].append(file_path)
         elif 'box' in basename.lower():
             classified['box'].append(file_path)
         elif 'energy' in basename.lower():
             classified['energy'].append(file_path)
-    
+
     return classified
 
 def preview_data(data, name="数据", max_elements=20):
@@ -84,6 +89,91 @@ def preview_data(data, name="数据", max_elements=20):
     
     # 显示统计信息
     print(f"  统计: min={data.min():.6f}, max={data.max():.6f}, mean={data.mean():.6f}")
+
+def add_frame_dimension(data, target_nframes=1):
+    """
+    为哈密顿量数据添加帧数维度
+
+    如果输入是3维 (nkpt, nlocal, nlocal)，转换为4维 (nframes, nkpt, nlocal, nlocal)
+    如果输入已经是4维，直接返回
+
+    Args:
+        data: numpy数组，形状为 (nkpt, nlocal, nlocal) 或 (nframes, nkpt, nlocal, nlocal)
+        target_nframes: 目标帧数（默认为1）
+
+    Returns:
+        添加帧数维度后的数组
+    """
+    print(f"\n  === 帧数维度处理 ===")
+    print(f"  输入形状: {data.shape}")
+    print(f"  输入维度: {data.ndim}")
+
+    if data.ndim == 3:
+        # 3维 -> 4维: (nkpt, nlocal, nlocal) -> (nframes, nkpt, nlocal, nlocal)
+        result = np.repeat(data[np.newaxis, ...], target_nframes, axis=0)
+        print(f"  处理: 添加帧数维度")
+        print(f"  输出形状: {result.shape} (nframes={target_nframes})")
+        return result
+    elif data.ndim == 4:
+        # 已经是4维，检查是否需要调整帧数
+        if data.shape[0] != target_nframes and target_nframes > 1:
+            result = np.repeat(data, target_nframes // data.shape[0], axis=0)
+            print(f"  调整: 帧数从 {data.shape[0]} 调整为 {target_nframes}")
+            print(f"  输出形状: {result.shape}")
+            return result
+        else:
+            print(f"  无需处理: 已经是4维数据")
+            return data
+    else:
+        print(f"  警告: 不支持的维度 {data.ndim}，返回原始数据")
+        return data
+
+def process_hamiltonian_file(file_path, output_path, nframes=1):
+    """
+    处理单个哈密顿量文件，添加帧数维度并保存
+
+    Args:
+        file_path: 输入的哈密顿量 .npy 文件路径
+        output_path: 输出文件路径
+        nframes: 要添加的帧数（默认为1）
+    """
+    if not os.path.exists(file_path):
+        print(f"错误: 文件不存在: {file_path}")
+        return None
+
+    print(f"\n  {'='*50}")
+    print(f"  处理哈密顿量文件")
+    print(f"  {'='*50}")
+    print(f"  输入文件: {file_path}")
+
+    try:
+        data = np.load(file_path)
+        preview_data(data, "原始哈密顿量数据")
+
+        # 添加帧数维度
+        processed_data = add_frame_dimension(data, target_nframes=nframes)
+
+        # 验证厄米性（如果是复数矩阵）
+        if np.iscomplexobj(processed_data):
+            is_hermitian = np.allclose(processed_data,
+                                       processed_data.conj().transpose(0, 1, 3, 2))
+            print(f"  厄米性检查: {'✓ 通过' if is_hermitian else '✗ 未通过'}")
+
+        # 保存处理后的数据
+        np.save(output_path, processed_data)
+
+        print(f"\n  {'='*50}")
+        print(f"  处理完成")
+        print(f"  {'='*50}")
+        print(f"  输出文件: {output_path}")
+        print(f"  最终形状: {processed_data.shape}")
+        print(f"  文件大小: {os.path.getsize(output_path) / 1024:.2f} KB")
+
+        return processed_data
+
+    except Exception as e:
+        print(f"  错误: 无法处理文件 - {e}")
+        return None
 
 def merge_npy_files(file_list, output_path, category):
     """合并npy文件，提升一个维度"""
@@ -133,13 +223,15 @@ def merge_npy_files(file_list, output_path, category):
 def main():
     # 解析命令行参数
     parser = argparse.ArgumentParser(
-        description='检索并分类所有npy文件，按名称合并到npydata文件夹中',
+        description='检索并分类所有npy文件，按名称合并到npydata文件夹中\n支持哈密顿量数据的处理和帧数维度添加',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 示例:
   python collect_npy.py                          # 使用当前目录
   python collect_npy.py /path/to/data            # 指定搜索目录
   python collect_npy.py ./00_H_scf               # 使用相对路径
+  python collect_npy.py --hamiltonian /path/to/deepks_htot.npy    # 处理哈密顿量文件
+  python collect_npy.py --hamiltonian /path/to/deepks_htot.npy --nframes 5  # 指定帧数
         '''
     )
     parser.add_argument(
@@ -153,7 +245,19 @@ def main():
         default=None,
         help='输出目录路径 (默认: 在搜索目录下创建npydata)'
     )
-    
+    parser.add_argument(
+        '--hamiltonian',
+        type=str,
+        default=None,
+        help='指定要处理的哈密顿量文件路径 (如 deepks_htot.npy 或 deepks_hamiltonian.npy)'
+    )
+    parser.add_argument(
+        '--nframes',
+        type=int,
+        default=1,
+        help='哈密顿量的目标帧数 (默认: 1)'
+    )
+
     args = parser.parse_args()
     
     # 获取搜索目录的绝对路径
@@ -207,12 +311,22 @@ def main():
             if files:
                 output_path = os.path.join(npydata_dir, f'{category}.npy')
                 merge_npy_files(files, output_path, category)
+
+        # 处理指定的哈密顿量文件（如果提供）
+        if args.hamiltonian:
+            print("\n" + "="*60)
+            print("处理指定的哈密顿量文件:")
+            print("="*60)
+
+            hamiltonian_output = os.path.join(npydata_dir, 'hamiltonian.npy')
+            process_hamiltonian_file(args.hamiltonian, hamiltonian_output,
+                                    nframes=args.nframes)
         
         # 最终汇总
         print("\n" + "="*60)
         print("处理完成! 生成的文件汇总:")
         print("="*60)
-        for category in ['atom', 'box', 'energy']:
+        for category in ['atom', 'box', 'energy', 'hamiltonian']:
             output_path = os.path.join(npydata_dir, f'{category}.npy')
             if os.path.exists(output_path):
                 data = np.load(output_path)
@@ -221,6 +335,11 @@ def main():
                 print(f"  - Shape: {data.shape}")
                 print(f"  - Dtype: {data.dtype}")
                 print(f"  - 大小: {os.path.getsize(output_path) / 1024:.2f} KB")
+                if category == 'hamiltonian':
+                    print(f"  - 帧数: {data.shape[0]}")
+                    if np.iscomplexobj(data):
+                        is_hermitian = np.allclose(data, data.conj().transpose(0, 1, 3, 2))
+                        print(f"  - 厄米性: {'✓ 通过' if is_hermitian else '✗ 未通过'}")
         print("\n" + "="*60)
         
     finally:

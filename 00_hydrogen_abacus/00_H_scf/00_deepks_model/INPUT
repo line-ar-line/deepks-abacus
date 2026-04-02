@@ -21,12 +21,13 @@ smearing_sigma          0.01
 mixing_type             broyden
 mixing_beta             0.8
 mixing_gg0              0
-
+dft_functional  hse
 #Parameters (6.Deepks)
-deepks_out_labels   1
+#deepks_out_labels   1
 deepks_scf	        1
-deepks_model	    model.ptg
-deepks_bandgap      1
+deepks_model	    model4.ptg
 
-bessel_descriptor_lmax         2 #lmax used in generating spherical bessel functions
-bessel_descriptor_ecut         50.000000 #energy cutoff for spherical bessel functions(Ry)
+#deepks_bandgap      1
+
+#bessel_descriptor_lmax         2 #lmax used in generating spherical bessel functions
+#bessel_descriptor_ecut         50.000000 #energy cutoff for spherical bessel functions(Ry)

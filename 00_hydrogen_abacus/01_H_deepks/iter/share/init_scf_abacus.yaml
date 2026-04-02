@@ -1,7 +1,7 @@
 abacus_path: /home/linearline/project/abacus-develop/build/abacus_4p
 cal_force: 0
 coord_type: Direct
-dft_functional: pbe
+dft_functional: hse
 ecutwfc: 100
 gamma_only: 1
 lattice_constant: 1.8897261258369282
