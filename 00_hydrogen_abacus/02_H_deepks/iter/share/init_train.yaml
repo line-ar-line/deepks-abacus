@@ -5,5 +5,5 @@ model_args:
   output_scale: 100
   use_resnet: true
 preprocess_args: {prefit_ridge: 10.0, prefit_trainable: false, prescale: false, preshift: true}
-train_args: {band_factor: 1.0, band_occ: 4, bandgap_factor: 0.5, decay_rate: 0.96,
-  decay_steps: 300, display_epoch: 100, n_epoch: 1000, start_lr: 0.0003}
+train_args: {band_factor: 1.0, band_occ: 4, bandgap_factor: 1, decay_rate: 0.96, decay_steps: 300,
+  display_epoch: 100, n_epoch: 1000, start_lr: 0.0003}

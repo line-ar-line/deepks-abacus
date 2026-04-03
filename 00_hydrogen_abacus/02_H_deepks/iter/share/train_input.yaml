@@ -1,5 +1,5 @@
 data_args: {batch_size: 16, conv_filter: true, conv_name: conv, extra_label: true,
   group_batch: 1}
 preprocess_args: {prefit_ridge: 10.0, prefit_trainable: false, prescale: false, preshift: false}
-train_args: {band_factor: 1.0, band_occ: 4, bandgap_factor: 0.5, decay_rate: 0.5,
-  decay_steps: 500, display_epoch: 100, n_epoch: 1000, start_lr: 0.0001}
+train_args: {band_factor: 1.0, band_occ: 4, bandgap_factor: 1, decay_rate: 0.5, decay_steps: 500,
+  display_epoch: 100, n_epoch: 1000, start_lr: 0.0001}

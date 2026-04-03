@@ -16,7 +16,7 @@ init_chg                       atomic #start charge is from 'atomic' or file
 init_vel                       0 #read velocity from STRU or not
 mem_saver                      0 #Only for nscf calculations. if set to 1, then a memory saving technique will be used for many k point calculations.
 cal_stress                     0 #calculate the stress or not
-diago_proc                     2 #the number of procs used to do diagonalization
+diago_proc                     1 #the number of procs used to do diagonalization
 nbspline                       -1 #the order of B-spline basis
 kspacing                       0 0 0  #unit in 1/bohr, should be > 0, default is 0 which means read KPT file
 min_dist_coef                  0.2 #factor related to the allowed minimum distance between two atoms
@@ -50,7 +50,7 @@ basis_type                     pw #PW; LCAO in pw; LCAO
 
 #Parameters (2.Electronic structure)
 ks_solver                      cg #cg; dav; lapack; genelpa; elpa; scalapack_gvx; cusolver
-nbands                         10 #number of bands
+nbands                         25 #number of bands
 nelec                          0 #input number of electrons
 nelec_delta                    0 #change in the number of total electrons
 nupdown                        0 #the difference number of electrons between spin-up and spin-down
@@ -64,7 +64,7 @@ nspin                          1 #1: single spin; 2: up and down spin; 4: noncol
 smearing_method                gauss #type of smearing_method: gauss; fd; fixed; mp; mp2; mv
 smearing_sigma                 0.01 #energy range for smearing
 mixing_type                    broyden #plain; pulay; broyden
-mixing_beta                    0.8 #mixing parameter: 0 means no new charge
+mixing_beta                    0.7 #mixing parameter: 0 means no new charge
 mixing_beta_mag                -10 #mixing parameter for magnetic density
 mixing_ndim                    8 #mixing dimension in pulay or broyden
 mixing_restart                 0 #threshold to restart mixing during SCF
@@ -77,7 +77,7 @@ mixing_tau                     0 #whether to mix tau in mGGA calculation
 mixing_dftu                    0 #whether to mix locale in DFT+U calculation
 gamma_only                     0 #Only for localized orbitals set and gamma point. If set to 1, a fast algorithm is used
 scf_nmax                       100 #number of electron iterations
-scf_thr                        1e-09 #charge density error
+scf_thr                        1e-08 #charge density error
 scf_ene_thr                    -1 #total energy error threshold
 scf_thr_type                   1 #type of the criterion of scf_thr, 1: reci drho for pw, 2: real drho for lcao
 scf_os_stop                    0 #whether to stop scf when oscillation is detected
@@ -301,7 +301,7 @@ xc_kernel                      LDA #exchange correlation (XC) kernel for LR-TDDF
 lr_init_xc_kernel              default  #The method to initalize the xc kernel
 lr_solver                      dav #the eigensolver for LR-TDDFT
 lr_thr                         0.01 #convergence threshold of the LR-TDDFT eigensolver
-nocc                           10 #the number of occupied orbitals to form the 2-particle basis ( <= nelec/2)
+nocc                           25 #the number of occupied orbitals to form the 2-particle basis ( <= nelec/2)
 nvirt                          1 #the number of virtual orbitals to form the 2-particle basis (nocc + nvirt <= nbands)
 
 #Parameters (10.lr-tddft)

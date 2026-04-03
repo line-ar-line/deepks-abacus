@@ -9,14 +9,14 @@
                               https://github.com/deepmodeling/abacus-develop         
                       Commit: ba570a7ed (Mon Mar 30 12:27:45 2026 +0800)
 
- Fri Apr  3 06:21:00 2026
+ Fri Apr  3 07:47:54 2026
  MAKE THE DIR         : OUT.ABACUS/
  RUNNING WITH DEVICE  : CPU / 12th Gen Intel(R) Core(TM) i5-1240P (x1)
  WARNING: some of potential function is set to zero cause of less than 1e-30.
  UNIFORM GRID DIM     : 125 * 125 * 125
  UNIFORM GRID DIM(BIG): 25 * 25 * 25
- DONE(0.444589   SEC) : SETUP UNITCELL
- DONE(0.445047   SEC) : INIT K-POINTS
+ DONE(0.617418   SEC) : SETUP UNITCELL
+ DONE(0.618165   SEC) : INIT K-POINTS
  ---------------------------------------------------------
  Self-consistent calculations for electrons
  ---------------------------------------------------------
@@ -30,71 +30,71 @@
  ---------------------------------------------------------
  Initial plane wave basis and FFT box
  ---------------------------------------------------------
- DONE(0.547739   SEC) : INIT PLANEWAVE
+ DONE(0.79702    SEC) : INIT PLANEWAVE
  START CHARGE      : atomic
- DONE(0.915481   SEC) : CHARGE
- DONE(0.988383   SEC) : POTENTIALS
+ DONE(1.14583    SEC) : CHARGE
+ DONE(1.23308    SEC) : POTENTIALS
 
  ================================================================
  SELF-CONSISTENT: 
  ================================================================
- DONE(1.58854    SEC) : INIT SCF
+ DONE(2.28421    SEC) : INIT SCF
  ITER       ETOT/eV          EDIFF/eV         DRHO     TIME/s
- GE1     -1.21127040e+01   0.00000000e+00   4.9227e-02   0.98
- GE2     -1.21122168e+01   4.87193879e-04   3.0075e-02   1.28
- GE3     -1.21122827e+01  -6.58531906e-05   4.2054e-03   1.03
- GE4     -1.21122623e+01   2.03539501e-05   1.0957e-03   1.04
- GE5     -1.21122582e+01   4.12825647e-06   4.6339e-04   1.04
- GE6     -1.21122577e+01   4.76174293e-07   1.5913e-04   1.15
- GE7     -1.21122575e+01   2.02130075e-07   7.4317e-05   1.14
- GE8     -1.21122570e+01   5.37758276e-07   6.3502e-05   0.88
- GE9     -1.21122569e+01   7.96236080e-08   1.4982e-05   1.03
- GE10    -1.21122569e+01   1.68346192e-08   5.2815e-06   1.25
- GE11    -1.21122569e+01  -9.25987822e-09   6.2072e-07   1.21
- GE12    -1.21122569e+01   4.02926393e-10   4.5633e-07   0.98
- GE13    -1.21122569e+01  -5.11826970e-10   9.8895e-08   0.65
- GE14    -1.21122569e+01  -5.85424811e-10   6.4551e-08   0.64
- GE15    -1.21122569e+01   8.89275153e-10   2.6409e-08   0.75
- GE16    -1.21122569e+01   6.30890432e-11   2.4673e-08   1.04
- GE17    -1.21122569e+01   5.16452231e-12   6.7218e-09   1.16
+ GE1     -1.21110601e+01   0.00000000e+00   4.9132e-02   1.10
+ GE2     -1.21122112e+01  -1.15108624e-03   3.0026e-02   1.04
+ GE3     -1.21122775e+01  -6.62841808e-05   4.2075e-03   1.04
+ GE4     -1.21122628e+01   1.47060363e-05   1.1322e-03   0.96
+ GE5     -1.21122579e+01   4.87908401e-06   4.7518e-04   0.74
+ GE6     -1.21122570e+01   9.70457781e-07   1.6071e-04   0.93
+ GE7     -1.21122568e+01   1.33909799e-07   7.8308e-05   1.03
+ GE8     -1.21122563e+01   5.36357765e-07   6.9864e-05   0.95
+ GE9     -1.21122561e+01   2.02443361e-07   1.5343e-05   1.17
+ GE10    -1.21122561e+01   1.35347387e-08   4.3658e-06   0.96
+ GE11    -1.21122561e+01  -3.56718042e-09   2.2367e-06   0.92
+ GE12    -1.21122561e+01   7.86475631e-10   3.9751e-07   0.65
+ GE13    -1.21122561e+01  -1.02519318e-09   2.2829e-07   0.84
+ GE14    -1.21122561e+01   8.91327972e-10   9.1002e-08   1.22
+ GE15    -1.21122561e+01  -5.62513002e-10   1.8390e-08   0.96
+ GE16    -1.21122561e+01  -6.23277331e-11   1.2740e-08   0.91
+ GE17    -1.21122561e+01  -4.22363969e-10   1.2333e-08   0.78
+ GE18    -1.21122561e+01   4.56394833e-10   1.0572e-08   0.73
+ GE19    -1.21122561e+01   2.63827182e-10   1.5615e-09   0.85
 
 TIME STATISTICS
 ------------------------------------------------------------------
    CLASS_NAME           NAME        TIME/s  CALLS   AVG/s  PER/%  
 ------------------------------------------------------------------
-                 total              19.08  13       1.47   100.00 
- Driver          atomic_world       19.08  1        19.08  100.00 
- ESolver_KS_LCAO before_all_runners 0.98   1        0.98   5.11   
- mymath          heapsort           0.24   3        0.08   1.27   
- Charge          atomic_rho         0.27   2        0.13   1.41   
- PW_Basis_Sup    recip2real         3.91   109      0.04   20.50  
- Relax_Driver    relax_driver       18.02  1        18.02  94.46  
- ESolver_KS      runner             18.02  1        18.02  94.45  
- ESolver_KS_LCAO before_scf         0.60   1        0.60   3.15   
- Potential       init_pot           0.57   1        0.57   3.01   
- Potential       cal_veff           12.03  18       0.67   63.05  
- H_Hartree_pw    v_hartree          1.48   18       0.08   7.74   
- PW_Basis_Sup    real2recip         3.82   125      0.03   20.03  
- PotXC           cal_veff           10.43  18       0.58   54.69  
- XC_Functional   v_xc               10.39  18       0.58   54.45  
- HSolverLCAO     solve              2.71   17       0.16   14.21  
- HamiltLCAO      updateHk           1.45   18       0.08   7.59   
- OperatorLCAO    init               1.45   126      0.01   7.59   
- Veff            contributeHR       1.16   17       0.07   6.10   
- Gint            cal_gint_vl        1.16   17       0.07   6.10   
- DeePKS          contributeHR       0.28   17       0.02   1.48   
- DeePKS_domain   cal_edelta_gedm    0.26   18       0.01   1.36   
- LCAO_domain     dm2rho             1.25   17       0.07   6.53   
- Gint            cal_gint_rho       1.11   17       0.07   5.83   
- Charge_Mixing   mix_rho            2.33   16       0.15   12.23  
- Charge_Mixing   mix_rho_real       2.24   16       0.14   11.75  
- Charge_Mixing   Kerker_screen_real 1.44   16       0.09   7.55   
- Charge          Pulay_mixing       0.20   16       0.01   1.04   
+                 total              20.17  13       1.55   100.00 
+ Driver          atomic_world       20.17  1        20.17  100.00 
+ ESolver_KS_LCAO before_all_runners 1.22   1        1.22   6.05   
+ mymath          heapsort           0.39   3        0.13   1.94   
+ PW_Basis_Sup    recip2real         4.10   121      0.03   20.32  
+ Relax_Driver    relax_driver       18.90  1        18.90  93.72  
+ ESolver_KS      runner             18.90  1        18.90  93.72  
+ ESolver_KS_LCAO before_scf         1.05   1        1.05   5.21   
+ Potential       init_pot           0.99   1        0.99   4.90   
+ Potential       cal_veff           13.17  20       0.66   65.30  
+ H_Hartree_pw    v_hartree          1.64   20       0.08   8.11   
+ PW_Basis_Sup    real2recip         4.13   139      0.03   20.48  
+ PotXC           cal_veff           11.40  20       0.57   56.54  
+ XC_Functional   v_xc               11.36  20       0.57   56.32  
+ HSolverLCAO     solve              2.69   19       0.14   13.34  
+ HamiltLCAO      updateHk           1.37   20       0.07   6.78   
+ OperatorLCAO    init               1.37   140      0.01   6.78   
+ Veff            contributeHR       1.10   19       0.06   5.46   
+ Gint            cal_gint_vl        1.10   19       0.06   5.46   
+ DeePKS          contributeHR       0.26   19       0.01   1.30   
+ DeePKS_domain   cal_edelta_gedm    0.24   20       0.01   1.19   
+ LCAO_domain     dm2rho             1.31   19       0.07   6.47   
+ Gint            cal_gint_rho       1.17   19       0.06   5.79   
+ Charge_Mixing   mix_rho            2.24   18       0.12   11.12  
+ Charge_Mixing   mix_rho_real       2.15   18       0.12   10.65  
+ Charge_Mixing   Kerker_screen_real 1.46   18       0.08   7.24   
 ------------------------------------------------------------------
 
 
- START  Time  : Fri Apr  3 06:21:00 2026
- FINISH Time  : Fri Apr  3 06:21:21 2026
+ START  Time  : Fri Apr  3 07:47:54 2026
+ FINISH Time  : Fri Apr  3 07:48:15 2026
  TOTAL  Time  : 21
  SEE INFORMATION IN : OUT.ABACUS/
 0 #SCF IS CONVERGED#

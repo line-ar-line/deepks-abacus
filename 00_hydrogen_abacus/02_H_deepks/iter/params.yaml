@@ -36,7 +36,7 @@ train_input:
     # 目标: 准确预测基态 + 激发态能量
     band_factor: 1.0        # 能级损失权重 (>0 启用哈密顿量学习)
     band_occ: 4              # 约束前4个能级 (覆盖1s, 2s, 2p 激发态)
-    bandgap_factor: 0.5      # 带隙约束权重 (直接约束 HOMO-LUMO gap)
+    bandgap_factor: 1     # 带隙约束权重 (直接约束 HOMO-LUMO gap)
 
 # init settings, these are for DeePHF task
 init_model: false # do not use existing model to restart from
@@ -67,5 +67,5 @@ init_train: # parameters for nn training
     # 目标: 准确预测基态 + 激发态能量
     band_factor: 1.0        # 能级损失权重 (>0 启用哈密顿量学习)
     band_occ: 4              # 约束前4个能级 (覆盖1s, 2s, 2p 激发态)
-    bandgap_factor: 0.5      # 带隙约束权重 (直接约束 HOMO-LUMO gap)
+    bandgap_factor: 1     # 带隙约束权重 (直接约束 HOMO-LUMO gap)
 

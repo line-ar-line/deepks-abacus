@@ -25,7 +25,7 @@ dft_functional  hse
 #Parameters (6.Deepks)
 #deepks_out_labels   1
 deepks_scf	        1
-deepks_model	    model4.ptg
+deepks_model	    model5.ptg
 
 #deepks_bandgap      1
 

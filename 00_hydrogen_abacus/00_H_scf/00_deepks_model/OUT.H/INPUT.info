@@ -248,7 +248,7 @@ deepks_out_freq_elec           0 #>0 frequency of electronic iteration to output
 deepks_out_base                none #base functional for output files, with dft_functional as target functional
 deepks_scf                     1 #>0 add V_delta to Hamiltonian
 deepks_equiv                   0 #whether to use equivariant version of DeePKS
-deepks_model                   model4.ptg #file dir of traced pytorch model: 'model.ptg
+deepks_model                   model5.ptg #file dir of traced pytorch model: 'model.ptg
 bessel_descriptor_lmax         2 #lmax used in generating spherical bessel functions
 bessel_descriptor_ecut         100.000000 #energy cutoff for spherical bessel functions(Ry)
 bessel_descriptor_tolerence    1e-12 #tolerence for spherical bessel root
