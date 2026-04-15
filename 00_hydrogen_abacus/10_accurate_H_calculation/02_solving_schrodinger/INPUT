@@ -1,0 +1,11 @@
+# 氢原子能级求解输入文件
+
+# 能级个数
+num_levels 10
+
+# 是否生成电子密度文件 (true/false)
+generate_density false
+
+# 径向参数
+r_max 20.0      # 径向最大距离（Å）
+r_points 500    # 径向网格点数

@@ -26,8 +26,8 @@ timer_enable_nvtx              0 #enable NVTX labeling for profiling or not
 cell_factor                    1.2 #used in the construction of the pseudopotential tables
 dm_to_rho                      0 #reads dmr in npz format and calculates electron density
 chg_extrap                     atomic #atomic; first-order; second-order; dm:coefficients of SIA
-ecutwfc                        50 #energy cutoff for wave functions
-ecutrho                        200 #energy cutoff for charge density and potential
+ecutwfc                        100 #energy cutoff for wave functions
+ecutrho                        400 #energy cutoff for charge density and potential
 nx                             0 #number of points along x axis for FFT grid
 ny                             0 #number of points along y axis for FFT grid
 nz                             0 #number of points along z axis for FFT grid
@@ -49,8 +49,8 @@ restart_load                   0 #restart from disk
 basis_type                     pw #PW; LCAO in pw; LCAO
 
 #Parameters (2.Electronic structure)
-ks_solver                      cg #cg; dav; lapack; genelpa; elpa; scalapack_gvx; cusolver
-nbands                         10 #number of bands
+ks_solver                      dav #cg; dav; lapack; genelpa; elpa; scalapack_gvx; cusolver
+nbands                         5 #number of bands
 nelec                          0 #input number of electrons
 nelec_delta                    0 #change in the number of total electrons
 nupdown                        0 #the difference number of electrons between spin-up and spin-down
@@ -77,7 +77,7 @@ mixing_tau                     0 #whether to mix tau in mGGA calculation
 mixing_dftu                    0 #whether to mix locale in DFT+U calculation
 gamma_only                     0 #Only for localized orbitals set and gamma point. If set to 1, a fast algorithm is used
 scf_nmax                       100 #number of electron iterations
-scf_thr                        1e-09 #charge density error
+scf_thr                        1e-08 #charge density error
 scf_ene_thr                    -1 #total energy error threshold
 scf_thr_type                   1 #type of the criterion of scf_thr, 1: reci drho for pw, 2: real drho for lcao
 scf_os_stop                    0 #whether to stop scf when oscillation is detected
@@ -108,7 +108,7 @@ by                             1 #division of an element grid in FFT grid along 
 bz                             1 #division of an element grid in FFT grid along z
 elpa_num_thread                -1 #Number of threads need to use in elpa
 num_stream                     4 #the nstream in compute the LCAO with CUDA
-bessel_nao_ecut                50.000000 #energy cutoff for spherical bessel functions(Ry)
+bessel_nao_ecut                100.000000 #energy cutoff for spherical bessel functions(Ry)
 bessel_nao_tolerence           1e-12 #tolerence for spherical bessel root
 bessel_nao_rcut                 #radial cutoff for spherical bessel functions(a.u.)
 bessel_nao_smooth              1 #spherical bessel smooth or not
@@ -250,7 +250,7 @@ deepks_scf                     0 #>0 add V_delta to Hamiltonian
 deepks_equiv                   0 #whether to use equivariant version of DeePKS
 deepks_model                   None #file dir of traced pytorch model: 'model.ptg
 bessel_descriptor_lmax         2 #lmax used in generating spherical bessel functions
-bessel_descriptor_ecut         50.000000 #energy cutoff for spherical bessel functions(Ry)
+bessel_descriptor_ecut         100.000000 #energy cutoff for spherical bessel functions(Ry)
 bessel_descriptor_tolerence    1e-12 #tolerence for spherical bessel root
 bessel_descriptor_rcut         6 #radial cutoff for spherical bessel functions(a.u.)
 bessel_descriptor_smooth       1 #spherical bessel smooth or not
@@ -301,7 +301,7 @@ xc_kernel                      LDA #exchange correlation (XC) kernel for LR-TDDF
 lr_init_xc_kernel              default  #The method to initalize the xc kernel
 lr_solver                      dav #the eigensolver for LR-TDDFT
 lr_thr                         0.01 #convergence threshold of the LR-TDDFT eigensolver
-nocc                           10 #the number of occupied orbitals to form the 2-particle basis ( <= nelec/2)
+nocc                           5 #the number of occupied orbitals to form the 2-particle basis ( <= nelec/2)
 nvirt                          1 #the number of virtual orbitals to form the 2-particle basis (nocc + nvirt <= nbands)
 
 #Parameters (10.lr-tddft)

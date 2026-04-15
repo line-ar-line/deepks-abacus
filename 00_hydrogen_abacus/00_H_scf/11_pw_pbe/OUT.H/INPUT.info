@@ -50,7 +50,7 @@ basis_type                     pw #PW; LCAO in pw; LCAO
 
 #Parameters (2.Electronic structure)
 ks_solver                      cg #cg; dav; lapack; genelpa; elpa; scalapack_gvx; cusolver
-nbands                         25 #number of bands
+nbands                         10 #number of bands
 nelec                          0 #input number of electrons
 nelec_delta                    0 #change in the number of total electrons
 nupdown                        0 #the difference number of electrons between spin-up and spin-down
@@ -301,7 +301,7 @@ xc_kernel                      LDA #exchange correlation (XC) kernel for LR-TDDF
 lr_init_xc_kernel              default  #The method to initalize the xc kernel
 lr_solver                      dav #the eigensolver for LR-TDDFT
 lr_thr                         0.01 #convergence threshold of the LR-TDDFT eigensolver
-nocc                           25 #the number of occupied orbitals to form the 2-particle basis ( <= nelec/2)
+nocc                           10 #the number of occupied orbitals to form the 2-particle basis ( <= nelec/2)
 nvirt                          1 #the number of virtual orbitals to form the 2-particle basis (nocc + nvirt <= nbands)
 
 #Parameters (10.lr-tddft)

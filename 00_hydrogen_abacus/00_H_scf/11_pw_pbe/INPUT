@@ -12,7 +12,7 @@ scf_nmax                100
 scf_thr                 1e-8
 #Parameters (3. Solve KS equation)
 nspin                   1
-nbands                  25
+nbands                  10
 ks_solver               cg
 #Parameters (4.Smearing)
 smearing_method         gauss
